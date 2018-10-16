@@ -1,0 +1,131 @@
+.home{
+    margin: auto;
+    align-items: center;
+}
+
+.navbar form{
+    margin-right: 20px;
+}
+
+.user-Image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.user-page-redirect a{
+    text-decoration: none;
+    color: white;
+}
+
+.user-Name{
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.edit a{
+    text-decoration: none;
+    color: white;
+}
+
+.mainPage {
+    display: flex;
+    align-items: center;
+    background: url("../images/main img.jpg") no-repeat left center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100%;
+    min-height: 87vh;
+    padding: 10px 0;
+}
+
+.card{
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    background: rgba(200, 202, 250, 0.5);
+    margin-top: 20px;
+    max-width: 350px;
+    box-shadow: 2px 2px 20px 5px #000;
+}
+.card-body{
+    padding-bottom: 0;
+}
+.card-body h3{
+    margin-bottom: 30px;
+}
+
+.card-body input{
+    margin-bottom: 20px;
+}
+
+.btn-success{
+    width: 200px;
+    max-width: 200px;
+}
+
+.btn-danger{
+    width: 120px;
+    max-width: 120px;
+}
+
+/* start media query*/
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .navbar form .search{
+        width: 300px;
+    }
+
+    .navbar form .search{
+        width: 210px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar{
+        height: 80px!important;
+        font-size: 20px
+    }
+    .navbar form a button{
+        color: white;
+    }
+    .navbar .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar form .search{
+        width: 210px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .navbar{
+        height: 80px!important;
+        font-size: 20px
+    }
+
+    .navbar .navbar-brand {
+        margin-left: 100px;
+    }
+
+    .navbar form .search{
+        width: 300px;
+    }
+
+    .navbar form a button{
+        color: white;
+    }
+}

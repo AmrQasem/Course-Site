@@ -1,0 +1,12 @@
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\bin\Debug\CourseSite.Models.dll.config
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\bin\Debug\CourseSite.Models.dll
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\bin\Debug\CourseSite.Models.pdb
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\bin\Debug\EntityFramework.dll
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\bin\Debug\EntityFramework.xml
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\obj\Debug\CourseSite.Models.csprojResolveAssemblyReference.cache
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\obj\Debug\CourseSite.Models.csproj.CoreCompileInputs.cache
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\obj\Debug\CourseSite.Models.csproj.CopyComplete
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\obj\Debug\CourseSite.Models.dll
+C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Models\obj\Debug\CourseSite.Models.pdb

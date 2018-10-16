@@ -1,0 +1,93 @@
+﻿@model Course_Site.ViewModels.CourseVM
+@{
+    ViewBag.Title = "Course Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="course">
+    <div class="course-head">
+        <h5 class="category-name">category name</h5>
+        <h1 class="course-name">course name</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="mx-auto col-xl-5 col-lg-5 col-md-7 col-12">
+                <div class="course-image-div">
+                    <a href="coursePreview.html">
+                        <img class="course-image img-fluid img-thumbnail" src="images/janko-ferlic-174927-unsplash.jpg">
+                        <div class="overlay">
+                            <span class="fa fa-play fa-5x">
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mx-auto col-xl-9 col-lg-9 col-md-12 col-12">
+                <div class="course-details">
+                    <h4 class="overview"> Overview</h4>
+                    <div class="cdetails">
+                        <div class="row">
+                            <div class="mx-auto aa col-xl-4 col-lg-4 col-md-4 col-12">
+                                <p class="personal-Info text-center">
+                                    By:
+                                    <span class="instructor-name">Daniel Alvech</span>
+                                </p>
+                                <p class="personal-Info text-center"><span class="duration">1h 30m</span></p>
+                                <p class="personal-Info text-center">
+                                    <span class="views">120</span>
+                                    views
+                                </p>
+                            </div>
+                            <div class="mx-auto text-left col-xl-8 col-lg-8 col-md-8 col-12">
+                                <p>
+                                    Details:
+                                    <span class="details: ">Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details Course Details</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-Content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="mx-auto col-12">
+                                <p>
+                                    <h4>Course Content:</h4>
+                                    <ul class="content">
+                                        <li class="lesson">
+                                            lesson1:
+                                            <ul class="lesson-videos">
+                                                <li>video1</li>
+                                                <li>video2</li>
+                                                <li>video3</li>
+                                            </ul>
+                                        </li>
+                                        <li class="lesson">
+                                            lesson2:
+                                            <ul class="lesson-videos">
+                                                <li>video1</li>
+                                                <li>video2</li>
+                                                <li>video3</li>
+                                                <li>video4</li>
+                                            </ul>
+                                        </li>
+                                        <li class="lesson">
+                                            lesson3:
+                                            <ul class="lesson-videos">
+                                                <li>video1</li>
+                                                <li>video2</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

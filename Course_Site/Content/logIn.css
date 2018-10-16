@@ -1,0 +1,41 @@
+.registeration{
+    background: url("../images/main img.jpg") no-repeat scroll left center;
+    background-size: cover;
+    min-height: 100%;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.back-div{
+    background-color: rgba(17, 17, 17, 0.5);
+    padding: 100px 50px 30px;
+    border-radius: 20px;
+}
+
+.back-div .image{
+    margin-bottom: 10px;
+}
+
+.back-div .image div{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: -120px;
+    font-size: 100px;
+}
+
+.form-group input{
+    padding-left: 30px;
+    font-family: "Noto Serif";
+}
+
+.form-group span{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    margin: 6px 0 0 3px;
+    
+}

@@ -1,0 +1,49 @@
+﻿@model List<Course_Site.ViewModels.CourseVM>
+@{
+    ViewBag.Title = "Course Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+    <div class="header">
+        <div class="header-overlay">
+            <p class="mx-auto">
+                Lets start to be a ninja in
+                <!-- this span should be changed with category name -->
+                <span class="track-name"> "Track name"</span>
+            </p>
+        </div>
+    </div>
+    <div class="courses">
+        <div class="container">
+            <div class="row">
+                <div class="courses-head col-12">Get ahead with New Course</div>
+                @foreach (var item in Model)
+                {
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-12">
+                        <a href="courseDetails.html">
+                            <div class="card mx-auto">
+                                <div class="mycard-img">
+                                    <div class="card-overlay">
+                                        <span class="fa fa-play fa-5x"></span>
+                                    </div>
+                                    <img class="card-img-top" src="~/images/main img.jpg" alt="course Image">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="course-name card-title">@item.CourseName</h3>
+                                    <hr>
+                                    <p class="course-instructor card-text">Instructor : @item.Instructor </p>
+                                    <p class="course-duration card-text">Duration: @item.Duration Hours</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="site description">
+    <meta name="keywords" content="course, courses, online course, online courses, sitename">
+    <meta name="robots" content="index, follow">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--font awesom CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- my css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/home.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/logIn.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/courseDetails.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/categoryCourses.css" />
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="~/images/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Course Site
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="serch-form form-inline mx-auto my-2 my-lg-0">
+                <input class="search form-control mr-sm-2" type="search" placeholder="Search for course" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="not-signedIn form-inline my-2 my-lg-0">
+                <form class="login-redirect form-inline my-2 my-lg-0">
+                    <a href="~/User/Login">
+                        <button class="btn btn-success my-2 my-sm-0" type="button">Login</button>
+                    </a>
+                </form>
+                <form class="signup-redirect form-inline my-2 my-lg-0">
+                    <a href="~/User/Register">
+                        <button class="btn btn-danger my-2 my-sm-0" type="button">Sign up</button>
+                    </a>
+                </form>
+            </div>
+
+            <div class="signedIn hidden form-inline my-2 my-lg-0">
+                <form class="user-page-redirect form-inline my-2 my-lg-0">
+                    <a href="home.html">
+                        <img class="user-Image img-thumbnail img-fluid" src="images/user img.png" alt="User Image" />
+                        <span class="user-Name">User Name</span>
+                    </a>
+                </form>
+                <form class="signin-redirect form-inline my-2 my-lg-0">
+                    <a href="logIn.html">
+                        <button class="btn btn-danger my-2 my-sm-0" type="button">Log out</button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    @RenderBody()
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

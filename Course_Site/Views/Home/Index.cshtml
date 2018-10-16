@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="home">
+    
+
+    <div class="header">
+        <div class="header-overlay">
+            <p class="mx-auto">Hello, Wellcome in "Course Site" feel free to learn with us any thing in any time</p>
+        </div>
+    </div>
+
+    <div class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="cats-head col-12">Get ahead with Learning Paths</div>
+                @Html.Action("GetAllCategories", "Home")
+            </div>
+        </div>
+    </div>
+</div>

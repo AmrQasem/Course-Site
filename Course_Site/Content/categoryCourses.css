@@ -1,0 +1,182 @@
+.home{
+    margin: auto;
+    align-items: center;
+}
+
+.navbar form{
+    margin-right: 20px;
+}
+
+.user-Image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.user-page-redirect a{
+    text-decoration: none;
+    color: white;
+}
+
+.user-Name{
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.hidden{
+    display: none;
+}
+
+.header {
+    margin: auto;
+    background: url("../images/janko-ferlic-174927-unsplash.jpg") no-repeat scroll center;
+    background-size: cover;
+    min-height: 100%;
+    min-height: 87vh;
+    position: relative;
+}
+
+.header .header-overlay{
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.35);
+}
+
+.header .header-overlay p{
+    font-size: 50px;
+    /*letter-spacing: 1.5px;*/
+    max-width: 800px;
+    font-family: 'Playfair Display', serif;
+}
+
+.courses {
+    height: 100%;
+    width: 100%;
+    background-color: #EEE;
+    padding: 50px 0;
+}
+
+.courses-head{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.courses a {
+    text-decoration: none;
+    color: black;
+}
+
+.card{
+    margin-top: 20px;
+    max-width: 100%;
+    font-family: 'Playfair Display', serif;
+}
+
+.card-title{
+    font-weight: bolder;
+}
+
+.card p{
+    font-weight: bold;
+    font-family: proxima;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.mycard-img{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay{
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-overlay span{
+    height: 100px;
+    width: 100px;
+    margin-top: 20%;
+}
+
+.card:hover .card-overlay{
+    display: block;
+}
+
+
+/* start media query*/
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .navbar form .search{
+        width: 300px;
+    }
+    .navbar form .search{
+        width: 210px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar{
+        height: 80px!important;
+        font-size: 20px
+    }
+    .navbar form a button{
+        color: white;
+    }
+    .navbar .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar form .search{
+        width: 210px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .navbar{
+        height: 80px!important;
+        font-size: 20px
+    }
+
+    .navbar .navbar-brand {
+        margin-left: 100px;
+    }
+
+    .navbar form .search{
+        width: 300px;
+    }
+
+    .navbar form a button{
+        color: white;
+    }
+}

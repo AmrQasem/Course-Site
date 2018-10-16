@@ -1,0 +1,144 @@
+body {
+    background-color: #EEE;
+}
+
+.home{
+    margin: auto;
+    align-items: center;
+}
+
+.navbar form{
+    margin-right: 20px;
+}
+
+.user-Image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.user-page-redirect a{
+    text-decoration: none;
+    color: white;
+}
+
+.user-Name{
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.edit{
+    background: url("../images/main img.jpg") no-repeat scroll left center;
+    background-size: cover;
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.back-div{
+    background-color: rgba(17, 17, 17, 0.5);
+    padding: 120px 50px 10px;
+    border-radius: 20px;
+}
+
+.back-div .image img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: -120px;
+}
+
+.form-group input{
+    padding-left: 30px;
+    font-family: "Noto Serif";
+}
+
+.form-group span{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    margin: 6px 0 0 3px;;
+}
+
+::-webkit-file-upload-button{
+    height: 30px;
+    width: 90px;
+    max-width: 120px;
+    border: none;
+    margin-top: -4px;
+    padding-right: 95px;
+    background: transparent;   
+}
+
+#imagePath{
+   position: absolute;
+   width: 135px;
+}
+
+.btn-success{
+    width: 150px;
+    max-width: 150px;
+}
+
+/* start media query*/
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .navbar form .search{
+        width: 300px;
+    }
+
+    .navbar form .search{
+        width: 210px;
+    }
+
+    .course-head{
+        padding: 0;
+        text-align: center;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar{
+        height: 80px!important;
+        font-size: 20px
+    }
+    .navbar .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar form .search{
+        width: 210px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .navbar{
+        height: 80px!important;
+        font-size: 20px
+    }
+
+    .navbar .navbar-brand {
+        margin-left: 100px;
+    }
+
+    .navbar form .search{
+        width: 300px;
+    }
+}
