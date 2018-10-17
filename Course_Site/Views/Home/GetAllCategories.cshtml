@@ -5,15 +5,15 @@
     <div class="col-xl-3 col-lg-3 col-md-4 col-12">
         <div class="card">
             <img class="img-fluid card-img" src="~/images/main img.jpg" alt="category name">
-        </div>
-        <div id="catId" class="card-img-overlay mx-auto" data-catID ="@item.ID">
-            <h3 class="card-title">@item.CategoryName</h3>
-            <a href="@Url.Action("GetCoursesByCategories","Home", new {CatId=item.ID })">
-                <div class="cat-courses mx-auto">
-                    <span><img src="https://png.icons8.com/windows/80/000000/visible.png"></span>
-                    View Courses
-                </div>
-            </a>
+            <div id="catId" class="card-img-overlay mx-auto" data-catID="@item.ID">
+                <h3 class="card-title">@item.CategoryName</h3>
+                <a href="@Url.Action("GetCoursesByCategories","Home", new {CatId=item.ID })">
+                    <div class="cat-courses mx-auto">
+                        <span><img src="https://png.icons8.com/windows/80/000000/visible.png"></span>
+                        View Courses
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 }
