@@ -10,3 +10,15 @@ C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.D
 C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Data\obj\Debug\CourseSite.Data.csproj.CopyComplete
 C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Data\obj\Debug\CourseSite.Data.dll
 C:\Users\Dev-lap1\Documents\Visual Studio 2017\Projects\Course_Site\CourseSite.Data\obj\Debug\CourseSite.Data.pdb
+D:\CourseSite\CourseSite.Data\bin\Debug\CourseSite.Data.dll.config
+D:\CourseSite\CourseSite.Data\bin\Debug\CourseSite.Data.dll
+D:\CourseSite\CourseSite.Data\bin\Debug\CourseSite.Data.pdb
+D:\CourseSite\CourseSite.Data\bin\Debug\EntityFramework.dll
+D:\CourseSite\CourseSite.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\CourseSite\CourseSite.Data\bin\Debug\EntityFramework.xml
+D:\CourseSite\CourseSite.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csprojResolveAssemblyReference.cache
+D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csproj.CoreCompileInputs.cache
+D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csproj.CopyComplete
+D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.dll
+D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.pdb

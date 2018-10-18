@@ -47,7 +47,7 @@ namespace Course_Site.Controllers
             }
             else
             {
-                Session["User"] = usr;
+                Session["User"] = model;
                 return RedirectPermanent("/Home/Index");
             }
         }
