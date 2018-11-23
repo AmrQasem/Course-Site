@@ -1,0 +1,57 @@
+﻿@model List<Course_Site.ViewModels.LessonVideoVM>
+@{
+    ViewBag.Title = "Course Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="home">
+    <section class="player">
+        <div class="player-container container">
+            <div class="row">
+                <div class="musicList col-xl-4 col-lg-4 col-md-12 col-sm-12 order-2">
+                    <div class="container">
+                        <h1><span class="mainColor course-Name">@Model.FirstOrDefault().CourseName</span></h1>
+                        <div class="list">
+                            <ul>
+                                @foreach (var item in Model)
+                                {
+                                    <li class="active" url="~/vids/1.mp4">@item.VideoTitle<span class="time">04:41</span></li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="musicPlayer mx-auto col-xl-8 col-lg-8 col-md-12 col-12 order-1">
+                    <video id="myPlayer" src=""></video>
+                    <div class="overlay hidden col-xl-12 col-lg-12 col-md-12 col-12">
+                        <div class="progress" id="seekBar"><span class="progress-bar seekBar " style="height: 5px;background: #EC135A;" aria-valuemin="0" aria-valuemax="100"></span></div>
+                        <span class="time-calc">
+                            <span class="curTime timer">00:00</span>
+                            <span class="timer">/</span>
+                            <span class="totalTime timer">00:00</span>
+                        </span>
+                        <button class="fa fa-backward fa-2x" title="previous video"></button>
+                        <button class="fa fa-play fa-4x" title="play video"></button>
+                        <span class="pause hidden"><button class="fa fa-pause fa-3x" title="pause video"></button></span>
+                        <button class="fa fa-forward fa-2x" title="Next video"></button>
+                        <button class="fa fa-volume-off fa-2x" title="Volume mute"></button>
+                        <button class="fa fa-volume-down fa-2x" title="volume down"></button>
+                        <button class="fa fa-volume-up fa-2x" title="volume up"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<video width="620" controls
+            poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg" >
+            <source
+                src="vids/1.mp4"
+                type="video/mp4">
+            Your browser doesn't support HTML5 video tag.
+        </video>-->
+    </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="~/Scripts/videoPlayer.js"></script>
+

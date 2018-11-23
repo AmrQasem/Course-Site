@@ -19,14 +19,29 @@ namespace Course_Site.Controllers
             _CourseService = new CoursesServices();
         }
         // GET: Course
-        public ActionResult Index()
+        public ActionResult Index(int CourseID)
         {
-            return View();
+            var model = _CourseService.GetCourseDetails(CourseID);
+            return View(model);
         }
-        //public ActionResult GetAllCourses()
-        //{
-        //    var model = _CourseService.GetAllCourses();
-        //    return PartialView(model);
-        //}
+
+        public ActionResult GetCourseLessons(int CourseID)
+        {
+            var model = _CourseService.GetCourseLessons(CourseID);
+            return PartialView(model);
+        }
+
+        public ActionResult GetLessonsVideo(int LessonID)
+        {
+            var model = _CourseService.GetLessonsVideo(LessonID);
+            return PartialView(model);
+        }
+
+        public ActionResult GetVideoOfTheCourse(int CourseID)
+        {
+            var model = _CourseService.GetCourseVideo(CourseID);
+            return PartialView(model);
+        }
+
     }
 }

@@ -1,0 +1,41 @@
+﻿@model Course_Site_BE.ViewModels.UserVM
+
+@{
+
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="registeration">
+        <div class="container">
+            <div class="row">
+                <div class="back-div mx-auto col-xl-6 col-lg-8 col-md-8 col-12">
+                    <div class="image text-center col-xl-12 col-lg-12 col md-12 col-12">
+                        <div class="material-icons">account_circle</div>
+                    </div>
+                    <form class="form col-12">
+                        <div class="form-group">
+                            <span class="material-icons">email</span>
+                            <input id="email" class="form-control" name="email" placeholder="email" type="email">
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger", name = "email", placeholder = "email", type = "email" })
+
+                        </div>
+                        <div class="form-group">
+                            <span class="material-icons">lock</span>
+                            <input id="password" class="form-control" name="password" placeholder="password" type="password">
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger", name = "password", placeholder = "password", type = "password" })
+
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-success" type="submit">LogIn</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}

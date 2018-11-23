@@ -14,6 +14,19 @@
     <FunctionImport Name="GetCategoryCourses" ReturnType="Collection(CourseSiteModel.GetCategoryCourses_Result)">
       <Parameter Name="CategoryID" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="GetCourseDetails" ReturnType="Collection(CourseSiteModel.GetCourseDetails_Result)">
+      <Parameter Name="CourseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="LessonVideos" EntityType="CourseSiteModel.LessonVideo" />
+    <FunctionImport Name="GetCourseLesson" ReturnType="Collection(CourseSiteModel.GetCourseLesson_Result)">
+      <Parameter Name="CourseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetLessonVideos" ReturnType="Collection(CourseSiteModel.GetLessonVideos_Result)">
+      <Parameter Name="LessonID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetVideoByCourses" ReturnType="Collection(CourseSiteModel.GetVideoByCourses_Result)">
+      <Parameter Name="CourseID" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="UserLogin_Result">
     <Property Type="Int32" Name="ID" Nullable="false" />
@@ -85,5 +98,44 @@
     <Property Type="Int32" Name="CategoryID" Nullable="false" />
     <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="200" />
     <Property Type="String" Name="Instructor" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="GetCourseDetails_Result">
+    <Property Type="String" Name="CourseName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CourseDescription" Nullable="true" MaxLength="2000" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="Price" Nullable="true" />
+    <Property Type="Int32" Name="Duration" Nullable="false" />
+    <Property Type="Int32" Name="CategoryID" Nullable="false" />
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Instructor" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <EntityType Name="LessonVideo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VideoTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="VideoPath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="LessonID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="GetCourseLesson_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="CourseID" Nullable="false" />
+    <Property Type="String" Name="LessonName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CourseName" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="GetLessonVideos_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="LessonName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="VideoTitle" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="VideoPath" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="GetVideoByCourses_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="VideoTitle" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="VideoPath" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="LessonName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CourseName" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="LessonID" Nullable="false" />
   </ComplexType>
 </Schema>

@@ -161,6 +161,7 @@
     <Compile Include="ViewModels\CategoryVM.cs" />
     <Compile Include="ViewModels\CoursesVideoVM.cs" />
     <Compile Include="ViewModels\CourseVM.cs" />
+    <Compile Include="ViewModels\LessonVideoVM.cs" />
     <Compile Include="ViewModels\LessonVM.cs" />
     <Compile Include="ViewModels\UserVM.cs" />
   </ItemGroup>
@@ -236,6 +237,10 @@
     <Content Include="vids\1.mp4" />
     <Content Include="vids\2.mp4" />
     <Content Include="Views\Home\GetCoursesByCategories.cshtml" />
+    <Content Include="Views\Course\GetCourseDetails.cshtml" />
+    <Content Include="Views\Course\GetCourseLessons.cshtml" />
+    <Content Include="Views\Course\GetLessonsVideo.cshtml" />
+    <Content Include="Views\Course\GetVideoOfTheCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CourseSite.Data\CourseSite.Data.csproj">

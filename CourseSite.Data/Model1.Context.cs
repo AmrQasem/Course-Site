@@ -32,6 +32,7 @@ namespace CourseSite.Data
         public virtual DbSet<CoursesVideo> CoursesVideos { get; set; }
         public virtual DbSet<Lesson> Lessons { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<LessonVideo> LessonVideos { get; set; }
     
         public virtual ObjectResult<UserLogin_Result> UserLogin(string email, string password)
         {
@@ -58,6 +59,42 @@ namespace CourseSite.Data
                 new ObjectParameter("CategoryID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetCategoryCourses_Result>("GetCategoryCourses", categoryIDParameter);
+        }
+    
+        public virtual ObjectResult<GetCourseDetails_Result> GetCourseDetails(Nullable<int> courseID)
+        {
+            var courseIDParameter = courseID.HasValue ?
+                new ObjectParameter("CourseID", courseID) :
+                new ObjectParameter("CourseID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetCourseDetails_Result>("GetCourseDetails", courseIDParameter);
+        }
+    
+        public virtual ObjectResult<GetCourseLesson_Result> GetCourseLesson(Nullable<int> courseID)
+        {
+            var courseIDParameter = courseID.HasValue ?
+                new ObjectParameter("CourseID", courseID) :
+                new ObjectParameter("CourseID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetCourseLesson_Result>("GetCourseLesson", courseIDParameter);
+        }
+    
+        public virtual ObjectResult<GetLessonVideos_Result> GetLessonVideos(Nullable<int> lessonID)
+        {
+            var lessonIDParameter = lessonID.HasValue ?
+                new ObjectParameter("LessonID", lessonID) :
+                new ObjectParameter("LessonID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetLessonVideos_Result>("GetLessonVideos", lessonIDParameter);
+        }
+    
+        public virtual ObjectResult<GetVideoByCourses_Result> GetVideoByCourses(Nullable<int> courseID)
+        {
+            var courseIDParameter = courseID.HasValue ?
+                new ObjectParameter("CourseID", courseID) :
+                new ObjectParameter("CourseID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetVideoByCourses_Result>("GetVideoByCourses", courseIDParameter);
         }
     }
 }

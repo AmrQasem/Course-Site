@@ -1,0 +1,152 @@
+.hidden{
+    display: none;
+}
+
+.home{
+    margin: auto;
+    align-items: center;
+}
+
+.navbar form{
+    margin-right: 20px;
+}
+
+.user-Image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.user-page-redirect a{
+    text-decoration: none;
+    color: white;
+}
+
+.user-Name{
+    font-size: 30px;
+    padding-top: 50px;
+}
+
+.edit a{
+    text-decoration: none;
+    color: white;
+}
+
+.addCourse{
+    background: url("../images/main img.jpg") no-repeat scroll left center;
+    background-size: cover;
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 87vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.back-div{
+    background-color: rgba(17, 17, 17, 0.5);
+    padding: 30px 25px 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-head{
+    margin-bottom: 20px;
+    color: white;
+    font-family: "Noto Serif";
+}
+
+.form-group {
+    font-family: "Noto Serif";
+}
+
+.form-group div{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.course-content input,
+.course-content label{
+    margin-top: 10px;
+}
+
+::-webkit-file-upload-button{
+    height: 30px;
+    width:120px;
+    max-width: 120px;
+    border: none;
+    margin-top: -4px;
+    padding-right: 125px;
+    background: transparent;    
+}
+
+#imagePath{
+   position: absolute;
+   width: 135px;
+   max-width: 135px;
+}
+
+.add-new-course{
+    width: 150px;
+    max-width: 150px;
+    font-size: 18px;
+}
+
+textarea{
+    margin-bottom: 15px;
+}
+
+/* start media query*/
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .navbar form .search{
+        width: 300px;
+    }
+
+    .navbar form .search{
+        width: 210px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar{
+        height: 80px!important;
+        font-size: 20px
+    }
+    .navbar .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar form .search{
+        width: 210px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .navbar{
+        height: 80px!important;
+        font-size: 20px
+    }
+
+    .navbar .navbar-brand {
+        margin-left: 100px;
+    }
+
+    .navbar form .search{
+        width: 300px;
+    }
+}

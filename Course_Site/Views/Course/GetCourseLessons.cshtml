@@ -1,0 +1,22 @@
+﻿@model List<Course_Site.ViewModels.LessonVM>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto col-12">
+            <p>
+                <h4>Course Content:</h4>
+                <ul class="content">
+                    @foreach (var item in Model)
+                    {
+                        <li class="lesson">
+                            @item.LessonName:
+                            <ul class="lesson-videos">
+                                @Html.Action("GetLessonsVideo", "Course", new { LessonID = item.ID })
+                            </ul>
+                        </li>
+                    }
+
+                </ul>
+            </p>
+        </div>
+    </div>
+</div>
