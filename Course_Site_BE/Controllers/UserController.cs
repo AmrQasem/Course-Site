@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using CourseSite.Data;
 using Course_Site_BE.Services;
 using Course_Site_BE.ViewModels;
+using System.Web.Security;
+using System.Data.Entity;
 
 namespace Course_Site_BE.Controllers
 {
@@ -48,7 +50,7 @@ namespace Course_Site_BE.Controllers
             else
             {
                 Session["User"] = model;
-                return RedirectPermanent("/Home/Index");
+                return RedirectPermanent("/Instructor/Index/"+ model.ID);
             }
         }
 
@@ -75,6 +77,7 @@ namespace Course_Site_BE.Controllers
                 obj.Email = Email;
                 obj.FirstName = FirstName;
                 obj.LastName = LastName;
+                obj.IsInstructor = true;
 
                 if (obj.UserName == null || obj.Password == null || obj.Phone == null || obj.Email == null || obj.FirstName == null || obj.LastName == null)
                 {
@@ -85,12 +88,43 @@ namespace Course_Site_BE.Controllers
                 {
                     db.Users.Add(obj);
                     db.SaveChanges();
-                    return RedirectPermanent("/Home/Index");
+                    return RedirectPermanent("/Instructor/Index");
                 }
             }
             Response.Write("<script>alert('Please enter all field in correct form');</script>");
             return View("Register");
 
+        }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return View("Login");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var model = _userService.GetUserById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int id, User user)
+        {
+            try
+            {
+                using (CourseSiteEntities db = new CourseSiteEntities())
+                {
+                    db.Entry(user).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                return RedirectToAction("/Home/Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
 

@@ -17,7 +17,6 @@ D:\CourseSite\CourseSite.Data\bin\Debug\EntityFramework.dll
 D:\CourseSite\CourseSite.Data\bin\Debug\EntityFramework.SqlServer.dll
 D:\CourseSite\CourseSite.Data\bin\Debug\EntityFramework.xml
 D:\CourseSite\CourseSite.Data\bin\Debug\EntityFramework.SqlServer.xml
-D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csprojResolveAssemblyReference.cache
 D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csproj.CoreCompileInputs.cache
 D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csproj.CopyComplete
 D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.dll

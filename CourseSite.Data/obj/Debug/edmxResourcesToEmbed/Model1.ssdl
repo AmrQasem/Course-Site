@@ -57,6 +57,7 @@
     <Property Name="Password" Type="nvarchar" MaxLength="2000" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="2000" />
     <Property Name="LastName" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsInstructor" Type="bit" />
   </EntityType>
   <Function Name="GetAllCategories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="GetCategoryCourses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -68,8 +69,14 @@
   <Function Name="GetCourseLesson" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CourseID" Type="int" Mode="In" />
   </Function>
+  <Function Name="GetCoursesByInstructor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InstructorID" Type="int" Mode="In" />
+  </Function>
   <Function Name="GetLessonVideos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="LessonID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetUserByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
   </Function>
   <Function Name="GetVideoByCourses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CourseID" Type="int" Mode="In" />

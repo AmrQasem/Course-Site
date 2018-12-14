@@ -6,10 +6,8 @@
       <Parameter Name="Password" Mode="In" Type="String" />
     </FunctionImport>
     <EntitySet Name="Categories" EntityType="CourseSiteModel.Category" />
-    <EntitySet Name="Courses" EntityType="CourseSiteModel.Cours" />
     <EntitySet Name="CoursesVideos" EntityType="CourseSiteModel.CoursesVideo" />
     <EntitySet Name="Lessons" EntityType="CourseSiteModel.Lesson" />
-    <EntitySet Name="Users" EntityType="CourseSiteModel.User" />
     <FunctionImport Name="GetAllCategories" ReturnType="Collection(CourseSiteModel.GetAllCategories_Result)" />
     <FunctionImport Name="GetCategoryCourses" ReturnType="Collection(CourseSiteModel.GetCategoryCourses_Result)">
       <Parameter Name="CategoryID" Mode="In" Type="Int32" />
@@ -27,6 +25,14 @@
     <FunctionImport Name="GetVideoByCourses" ReturnType="Collection(CourseSiteModel.GetVideoByCourses_Result)">
       <Parameter Name="CourseID" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="GetUserByID" ReturnType="Collection(CourseSiteModel.GetUserByID_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Users" EntityType="CourseSiteModel.User" />
+    <FunctionImport Name="GetCoursesByInstructor" ReturnType="Collection(CourseSiteModel.GetCoursesByInstructor_Result)">
+      <Parameter Name="InstructorID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Courses" EntityType="CourseSiteModel.Cours" />
   </EntityContainer>
   <ComplexType Name="UserLogin_Result">
     <Property Type="Int32" Name="ID" Nullable="false" />
@@ -39,18 +45,6 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CategoryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="CourseID" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Cours">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CourseName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="CourseDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-    <Property Name="Price" Type="Int32" />
-    <Property Name="Duration" Type="Int32" Nullable="false" />
-    <Property Name="CategoryID" Type="Int32" Nullable="false" />
-    <Property Name="Instructor" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="CoursesVideo">
     <Key>
@@ -68,18 +62,6 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="LessonName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="CourseID" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="User">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Password" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
-    <Property Name="FirstName" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-    <Property Name="LastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <ComplexType Name="GetAllCategories_Result">
     <Property Type="Int32" Name="ID" Nullable="false" />
@@ -138,4 +120,47 @@
     <Property Type="String" Name="CourseName" Nullable="true" MaxLength="200" />
     <Property Type="Int32" Name="LessonID" Nullable="false" />
   </ComplexType>
+  <ComplexType Name="GetUserByID_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="2000" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsInstructor" Type="Boolean" />
+  </EntityType>
+  <ComplexType Name="GetCoursesByInstructor_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CourseName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="CourseDescription" Nullable="true" MaxLength="2000" />
+    <Property Type="Int32" Name="Price" Nullable="true" />
+    <Property Type="Int32" Name="Duration" Nullable="false" />
+    <Property Type="Int32" Name="InstructorID" Nullable="false" />
+    <Property Type="Int32" Name="CategoryID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Cours">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CourseDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="Instructor" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

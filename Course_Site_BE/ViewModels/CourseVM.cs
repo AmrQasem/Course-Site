@@ -16,8 +16,7 @@ namespace Course_Site_BE.ViewModels
         public string CategoryName { get; set; }
         public string Instructor { get; set; }
 
-        [NotMapped]
-        public List<int> CategoriesID { get; set; }
+        public int CategoryID { get; set; }
 
     }
 }

@@ -6,11 +6,11 @@
     <edmx:Diagrams>
       <Diagram DiagramId="68ef7bd20895493596d7f4870a24a3f7" Name="Diagram1">
         <EntityTypeShape EntityType="CourseSiteModel.Category" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CourseSiteModel.Cours" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="CourseSiteModel.CoursesVideo" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="CourseSiteModel.Lesson" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="CourseSiteModel.User" Width="1.5" PointX="4.75" PointY="0.75" />
         <EntityTypeShape EntityType="CourseSiteModel.LessonVideo" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="CourseSiteModel.User" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="CourseSiteModel.Cours" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

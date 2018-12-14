@@ -13,9 +13,11 @@
                         <div class="list">
                             <ul>
                                 @foreach (var item in Model)
-                                {
-                                    <li class="active" url="~/vids/1.mp4">@item.VideoTitle<span class="time">04:41</span></li>
-                                }
+    {
+                           
+                            <li class="active" url="../@item.VideoPath">@item.VideoTitle<span class="time">04:41</span></li>
+
+}
                             </ul>
                         </div>
                         <div class="clearfix"></div>

@@ -14,5 +14,7 @@ namespace Course_Site_BE.ViewModels
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public bool Isinstructor { get; set; }
+
     }
 }

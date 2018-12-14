@@ -10,17 +10,15 @@
 namespace CourseSite.Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class User
+    public partial class GetCoursesByInstructor_Result
     {
         public int ID { get; set; }
-        public string UserName { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        public string Password { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public Nullable<bool> IsInstructor { get; set; }
+        public string CourseName { get; set; }
+        public string CourseDescription { get; set; }
+        public Nullable<int> Price { get; set; }
+        public int Duration { get; set; }
+        public int InstructorID { get; set; }
+        public int CategoryID { get; set; }
     }
 }

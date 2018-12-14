@@ -241,6 +241,7 @@
     <Content Include="Views\Course\GetCourseLessons.cshtml" />
     <Content Include="Views\Course\GetLessonsVideo.cshtml" />
     <Content Include="Views\Course\GetVideoOfTheCourse.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CourseSite.Data\CourseSite.Data.csproj">

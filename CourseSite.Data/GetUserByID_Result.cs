@@ -10,9 +10,8 @@
 namespace CourseSite.Data
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class User
+    public partial class GetUserByID_Result
     {
         public int ID { get; set; }
         public string UserName { get; set; }
@@ -21,6 +20,5 @@ namespace CourseSite.Data
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Nullable<bool> IsInstructor { get; set; }
     }
 }

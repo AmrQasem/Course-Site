@@ -28,11 +28,11 @@ namespace CourseSite.Data
         }
     
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Cours> Courses { get; set; }
         public virtual DbSet<CoursesVideo> CoursesVideos { get; set; }
         public virtual DbSet<Lesson> Lessons { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<LessonVideo> LessonVideos { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Cours> Courses { get; set; }
     
         public virtual ObjectResult<UserLogin_Result> UserLogin(string email, string password)
         {
@@ -95,6 +95,24 @@ namespace CourseSite.Data
                 new ObjectParameter("CourseID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetVideoByCourses_Result>("GetVideoByCourses", courseIDParameter);
+        }
+    
+        public virtual ObjectResult<GetUserByID_Result> GetUserByID(Nullable<int> iD)
+        {
+            var iDParameter = iD.HasValue ?
+                new ObjectParameter("ID", iD) :
+                new ObjectParameter("ID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetUserByID_Result>("GetUserByID", iDParameter);
+        }
+    
+        public virtual ObjectResult<GetCoursesByInstructor_Result> GetCoursesByInstructor(Nullable<int> instructorID)
+        {
+            var instructorIDParameter = instructorID.HasValue ?
+                new ObjectParameter("InstructorID", instructorID) :
+                new ObjectParameter("InstructorID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetCoursesByInstructor_Result>("GetCoursesByInstructor", instructorIDParameter);
         }
     }
 }

@@ -1,4 +1,13 @@
 ﻿<!DOCTYPE html>
+@{
+    var _user = (Course_Site_BE.ViewModels.UserVM)Session["User"];
+    string id = "";
+    if (_user != null)
+    {
+        id = _user.ID.ToString();
+    }
+
+}
 <html>
 <head>
     <meta charset="utf-8" />
@@ -18,17 +27,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- my css -->
     <link rel="stylesheet" type="text/css" media="screen" href="~/Content/home.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/addCourseDetails.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/addCourseLessons.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/addManagerOrInstructor.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/delete.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/editCourseDetails.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/editCourseLessons.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/editUserProfile.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/instructorHome.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/mangerHome.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/toBeEditedCourse.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="~/Content/logIn.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/courseDetails.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/categoryCourses.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/coursePreview.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/videoPlayer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/editUserProfile.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/mangerHome.css" />
 
 </head>
 <body>
@@ -45,32 +51,48 @@
                 <input class="search form-control mr-sm-2" type="search" placeholder="Search for course" aria-label="Search">
                 <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <div class="not-signedIn form-inline my-2 my-lg-0">
-                <form class="login-redirect form-inline my-2 my-lg-0">
-                    <a href="~/User/Login">
-                        <button class="btn btn-success my-2 my-sm-0" type="button">Login</button>
-                    </a>
-                </form>
-                <form class="signup-redirect form-inline my-2 my-lg-0">
-                    <a href="~/User/Register">
-                        <button class="btn btn-danger my-2 my-sm-0" type="button">Sign up</button>
-                    </a>
-                </form>
-            </div>
 
-            <div class="signedIn hidden form-inline my-2 my-lg-0">
-                <form class="user-page-redirect form-inline my-2 my-lg-0">
-                    <a href="home.html">
-                        <img class="user-Image img-thumbnail img-fluid" src="images/user img.png" alt="User Image" />
-                        <span class="user-Name">User Name</span>
-                    </a>
-                </form>
-                <form class="signin-redirect form-inline my-2 my-lg-0">
-                    <a href="logIn.html">
-                        <button class="btn btn-danger my-2 my-sm-0" type="button">Log out</button>
-                    </a>
-                </form>
-            </div>
+            @if (id == "")
+            {
+                <div class="not-signedIn form-inline my-2 my-lg-0">
+                    <form class="login-redirect form-inline my-2 my-lg-0">
+                        <a href="~/User/Login">
+                            <button class="btn btn-success my-2 my-sm-0" type="button">Login</button>
+                        </a>
+                    </form>
+                    <form class="signup-redirect form-inline my-2 my-lg-0">
+                        <a href="~/User/Register">
+                            <button class="btn btn-danger my-2 my-sm-0" type="button">Sign up</button>
+                        </a>
+                    </form>
+                </div>
+                    }
+                    else
+                    {
+                        int y = _user.ID;
+                        string userName = _user.UserName;
+                <div class="signedIn form-inline my-2 my-lg-0">
+                    <form class="user-page-redirect form-inline my-2 my-lg-0">
+                        <a href="#">
+                            <img class="user-Image img-thumbnail img-fluid" src="~/images/user img.png" alt="User Image" />
+                            <span class="user-Name">@userName</span>
+                        </a>
+                    </form>
+                    <form class="edit form-inline my-2 my-lg-0">
+                        <a href="@Url.Action("Edit","User", new {id= _user.ID })">
+                            <button class="edit-user-profile btn btn-success my-2 my-sm-0" type="button">Edit Profile</button>
+                        </a>
+                    </form>
+                    <form class="signin-redirect form-inline my-2 my-lg-0">
+                        <a href="~/User/Logout">
+                            <button class="btn btn-danger my-2 my-sm-0" type="button">Log out</button>
+                        </a>
+                    </form>
+                </div>
+            }
+
+
+
         </div>
     </nav>
     @RenderBody()

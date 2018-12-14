@@ -36,27 +36,27 @@ namespace Course_Site_BE.Services
             }
         }
 
-        public List<CourseVM> GetCategoryCourses(int CatID)
-        {
-            try
-            {
-                var model = (from n in _db.GetCategoryCourses(CatID)
-                             select new CourseVM
-                             {
-                                 ID = n.ID,
-                                 CourseName = n.CourseName,
-                                 CourseDescription = n.CourseDescription,
-                                 Duration = n.Duration,
-                                 Price = n.Price,
-                                 CategoryName = n.CategoryName,
-                                 Instructor = n.Instructor
-                             }).ToList();
-                return (model);
-            }
-            catch
-            {
-                return new List<CourseVM>();
-            }
-        }
+        //public List<CourseVM> GetCategoryCourses(int CatID)
+        //{
+        //    try
+        //    {
+        //        var model = (from n in _db.GetCategoryCourses(CatID)
+        //                     select new CourseVM
+        //                     {
+        //                         ID = n.ID,
+        //                         CourseName = n.CourseName,
+        //                         CourseDescription = n.CourseDescription,
+        //                         Duration = n.Duration,
+        //                         Price = n.Price,
+        //                         CategoryName = n.CategoryName,
+        //                         //InstructorID = n.Instructor
+        //                     }).ToList();
+        //        return (model);
+        //    }
+        //    catch
+        //    {
+        //        return new List<CourseVM>();
+        //    }
+        //}
     }
 }

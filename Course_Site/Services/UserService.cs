@@ -34,5 +34,28 @@ namespace Course_Site.Services
                 return new UserVM();
             }
         }
+
+        public UserVM GetUserById(int UserID)
+        {
+            try
+            {
+                var model = (from n in _db.GetUserByID(UserID)
+                             select new UserVM
+                             {
+                                 ID = n.ID,
+                                 Email = n.Email,
+                                 FirstName = n.FirstName,
+                                 LastName = n.LastName,
+                                 Password = n.Password,
+                                 Phone = n.Phone,
+                                 UserName = n.UserName
+                             }).FirstOrDefault();
+                return (model);
+            }
+            catch
+            {
+                return new UserVM();
+            }
+        }
     }
 }
