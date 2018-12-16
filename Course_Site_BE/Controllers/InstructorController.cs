@@ -21,7 +21,7 @@ namespace Course_Site_BE.Controllers
         }
 
         // GET: Instructor
-        public ActionResult Index(int ID)
+        public ActionResult Index(int ID = 0)
         {
             //var model = _userService.GetCourseByInstructor(ID);
             return View();

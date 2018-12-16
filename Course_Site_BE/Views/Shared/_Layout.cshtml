@@ -35,7 +35,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="~/Content/videoPlayer.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="~/Content/editUserProfile.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="~/Content/mangerHome.css" />
-
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/instructorHome.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Content/addCourseDetails.css" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -78,7 +79,7 @@
                             <span class="user-Name">@userName</span>
                         </a>
                     </form>
-                    <form class="edit form-inline my-2 my-lg-0">
+                    <form class="edit-btn form-inline my-2 my-lg-0">
                         <a href="@Url.Action("Edit","User", new {id= _user.ID })">
                             <button class="edit-user-profile btn btn-success my-2 my-sm-0" type="button">Edit Profile</button>
                         </a>

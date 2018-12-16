@@ -99,7 +99,7 @@ namespace Course_Site.Controllers
         {
             FormsAuthentication.SignOut();
             Session.Abandon(); // it will clear the session at the end of request
-            return View("Login");
+            return RedirectToAction("Login");
         }
 
         public ActionResult Edit(int id)
@@ -118,7 +118,7 @@ namespace Course_Site.Controllers
                     db.Entry(user).State = EntityState.Modified;
                     db.SaveChanges();
                 }
-                return RedirectToAction("/Home/Index");
+                return View("/Home/Index");
             }
             catch
             {
