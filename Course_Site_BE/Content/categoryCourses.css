@@ -132,6 +132,11 @@
     .navbar form .search{
         width: 210px;
     }
+    .header .header-overlay p{
+        font-size: 38px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up)*/

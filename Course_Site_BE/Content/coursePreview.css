@@ -1,4 +1,4 @@
-.home{
+.coursePreview{
     margin: auto;
     align-items: center;
 }
@@ -28,6 +28,19 @@
     display: none;
 }
 
+
+.coursePreview .musicPlayer{
+    margin-top: 50px;
+}
+
+.coursePreview #player{
+    min-height: 400px;
+}
+
+.coursePreview #player *{
+    position: static;
+}
+
 /* start media query*/
 
 /* Extra small devices (portrait phones, less than 576px)*/
@@ -44,16 +57,24 @@
     .navbar form .search{
         width: 210px;
     }
+
+    .coursePreview .musicPlayer{
+        margin-top: 20px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
-    
+    .coursePreview .musicPlayer{
+        margin-top: 20px;
+    }
 }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
-    
+    .coursePreview .musicPlayer{
+        margin-top: 20px;
+    }
 }
 
 /* Large devices (desktops, 992px and up)*/
@@ -71,6 +92,8 @@
     .navbar form .search{
         width: 210px;
     }
+
+
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
@@ -91,4 +114,6 @@
     .navbar form a button{
         color: white;
     }
+
+
 }

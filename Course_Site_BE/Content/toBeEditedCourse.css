@@ -44,56 +44,11 @@
     padding: 10px 0;
 }
 
-.card{
-    /*background-color: rgba(255, 255, 255, 0.5);*/
-    background: rgba(200, 202, 250, 0.5);
-    margin-top: 20px;
-    max-width: 350px;
-    box-shadow: 2px 2px 20px 5px #000;
-}
-
-.card:hover{
-    box-shadow: 2px 2px 30px 10px #000;
-}
-
-.card-body{
-    padding-bottom: 0;
-}
-.card-body h4{
-    margin-bottom: 30px;
-}
-
-.card-body input{
-    margin-bottom: 20px;
-}
-
-.procedures{
-    font-size: 18px;
-    text-align: left;
-    font-weight: 500;
-}
-
-.procedures select{
-    font-weight: 400;
-    font-size: 17px;
-    font-family: serif;
-}
-
-.deleteLesson input,
-.addVideo input,
-.deleteVideo input{
-    margin-top: -10px;
-}
-
-.addedVideo input{
-    margin-top: -10px;
-}
-
-#videosPath{
+.addVido #videosPath{
     position: absolute;
     width: 135px;
     max-width: 135px;
-    left: 20px;
+    left: 65px;
  }
 
 ::-webkit-file-upload-button{
@@ -103,17 +58,16 @@
     border: none;
     margin-top: -4px;
     padding-right: 125px;
-    background: transparent;    
+    background: transparent; 
 }
 
-.btn-success{
-    width: 200px;
-    max-width: 200px;
+.tab-content{
+    margin: 50px 0;
 }
 
-.btn-danger{
-    width: 120px;
-    max-width: 120px;
+.nav-pills .nav-link{
+    background: rgba(255, 255, 255, 0.5);
+    margin-left: 5px;
 }
 
 /* start media query*/

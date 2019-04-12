@@ -6,11 +6,15 @@ $(function(){
         //var lessonName = $('input[name="course-name"]').val();
 
         //Add form to add lesson
-        var newLesson = '<div class="addlesson"> <input id="lesson-Name" class="lesson-Name form-control" type="text" placeholder="Lesson Name">';
-        newLesson += '<input id="lesson-number" class="lesson-number form-control" type="text" placeholder="Lesson Number">';
-        newLesson += '<label id="videosPath" class="btn btn-primary" for="choose-lesson'+ lessonNumber + ' lesson-vids">Choose Videos</label>';
-        newLesson += '<input id="choose-lesson'+ lessonNumber + ' lesson-vids" class="lesson-vids form-control" type="file" name="course-videos" accept="video/mp4,video/x-m4v,video/*" multiple>'
-        newLesson += '<div class="text-center"> <input class="lesson-added btn btn-success" value="Done" type="button"> <input class="lesson-canceled btn btn-warning" value="Cancel" type="button"> </div> </div>';
+        var newLesson = `<div class="addlesson">
+                            <input id="lesson-Name" class="lesson-Name form-control" type="text" placeholder="Lesson Name">
+                            <input id="lesson-number" class="lesson-number form-control" type="text" placeholder="Lesson Number">
+                            <input id="choose-lesson${lessonNumber} lesson-vids-to-add" class="lesson-vids form-control" type="text" name="course-videos" placeholder="Lessons Links">
+                            <div class="text-center">
+                                <input class="lesson-added btn btn-success" value="Done" type="button">
+                                <input class="lesson-canceled btn btn-warning" value="Cancel" type="button">
+                            </div>
+                        </div>`;
         $('.course-content').append(newLesson);
 
         //add event lestinet when press Done
@@ -21,7 +25,7 @@ $(function(){
             //vidsTitle = $(this).parent().parent().find('.lesson-vids');
             var lessonName = this.parentElement.parentElement.getElementsByClassName('lesson-Name')[0];
             var lessonNumber = this.parentElement.parentElement.getElementsByClassName('lesson-number')[0].value;
-            var vidsInfo = this.parentElement.parentElement.getElementsByClassName('lesson-vids')[0].files;
+            var vidsInfo = this.parentElement.parentElement.getElementsByClassName('lesson-vids')[0];
 
             //check if lesson name not empty
             if(lessonName.value.trim() != ""){
@@ -48,9 +52,9 @@ $(function(){
                 }
 
                 //check if videos are entered
-                if(vidsInfo.length != 0){
+                if(vidsInfo.value.trim() != ""){
 
-                    var vidsName = [];
+                    var vidsName = vidsInfo.value.split(',');
                     for(var i =0; i<vidsInfo.length; i++){
                         vidsName[vidsName.length] = vidsInfo[i].name;
                     }

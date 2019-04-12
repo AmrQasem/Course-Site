@@ -1,110 +1,107 @@
-.whiteCol {
+.whiteCol{
     color: white
 }
 
-.player {
+.player{
     max-height: 100%;
     height: 87vh;
     max-height: 87vh;
     margin: auto;
-    background-color: #EEE;
 }
 
-.player-container {
-    max-width: 100% !important;
+.player-container{
+    max-width: 100%!important;
+    background-color: #ddd;
 }
 
-.player .musicList {
+.player .musicList{
     background-color: #1F1F1F;
-    padding-left: 90px;
-    padding-bottom: 25px;
+    padding-left: 50px;
+    padding-bottom: 15px;
     padding-top: 23px;
     color: #787878;
     max-height: 100%;
 }
 
-.course-Name {
+.course-Name{
     /*color: #EC135A;*/
     color: white;
     font-family: 'Playfair Display', serif;
+    margin-left: -20px
 }
 
-.player .musicList .time {
+.player .musicList .time{
     float: right;
     margin-right: 20px;
 }
 
-.player .musicList .list {
+.player .musicList .list{
     height: 400px;
+    max-height: 100%;
     overflow-y: auto;
     overflow-x: auto;
     margin-bottom: 20px;
     margin-top: 30px;
-    margin-left: -50px;
-    margin-right: 30PX;
+    margin-left: -40px; 
     background: #101010;
     border: 1px solid #000;
 }
-
-    .player .musicList .list ul {
-        list-style: none;
-        min-width: 300px;
-        padding-left: 0px;
-    }
-
-        .player .musicList .list ul .active {
-            background: #000;
-            /*color: #EC145B;*/
-            color: white;
-            border: 2px solid #000;
-        }
-
-        .player .musicList .list ul li {
-            padding-left: 10px;
-            cursor: pointer;
-        }
-
-            .player .musicList .list ul li:hover {
-                background: #333;
-                /*color: #AA1256;*/
-            }
-
-.player .musicPlayer {
-    margin-top: 50px;
+.player .musicList .list ul{
+    list-style: none;
+    min-width: 300px;
+    padding-left: 0px;
 }
 
-video {
+.player .musicList .list ul .active{
+    background: #000;
+    /*color: #EC145B;*/
+    color:white;
+    border: 2px solid #000;
+}
+
+.player .musicList .list ul li{
+    padding-left: 10px;
+}
+
+.player .musicList .list ul li:hover{
+    background: #333;
+    /*color: #AA1256;*/
+}
+
+.player .musicPlayer{
+    height: 100%;
+}
+
+video{
     width: 100%;
     height: 100%;
     margin-top: 0px;
 }
 
-.player .musicPlayer .overlay {
-    width: 97%;
-    margin-left: 15px;
+.player .musicPlayer .overlay{
     position: absolute;
-    bottom: 0px !important;
+    bottom: 0px;
     left: 0;
     height: 80px;
     max-width: 100%;
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(0 ,0 ,0, 0.9);
     color: white;
     text-align: center;
     transition: all 0.5s ease-in-out;
     padding: 0 30px;
 }
 
-.musicPlayer:hover .overlay {
+.musicPlayer:hover .overlay{
     display: block;
 }
 
-#seekBar {
+#seekBar{
     position: relative;
     top: 10px;
     height: 5px;
 }
 
-.musicPlayer button {
+.musicPlayer button{
     background: transparent;
     color: white;
     border: none;
@@ -113,27 +110,22 @@ video {
     margin-right: 40px;
     transition: all 0.5s ease-in-out;
 }
+.musicPlayer button:hover{color: #EC135A;}
 
-    .musicPlayer button:hover {
-        color: #EC135A;
-    }
+.hidden{display: none;}
 
-.hidden {
-    display: none;
-}
-
-.time-calc {
+.time-calc{
     margin: 0 60px 0 10px;
 }
 
 .fa-play,
-.fa-pause {
+.fa-pause{
     position: relative;
     top: 8px;
-    font-size: 40px !important;
+    font-size: 40px!important;
 }
 
-.timer {
+.timer{
     position: relative;
     display: inline-block;
     letter-spacing: 0px;
@@ -142,7 +134,7 @@ video {
     font-weight: 500;
 }
 
-.totalTime {
+.totalTime{
     margin-right: 15px;
 }
 
@@ -150,63 +142,85 @@ video {
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
-    .musicPlayer button {
+    .musicPlayer button{
         margin-right: -5px;
         font-size: 15px;
     }
 
-    .time-calc {
+    .time-calc{
         margin: 0;
     }
-
-    .timer {
+    .timer{
         font-size: 12px;
         top: 0;
     }
-
+    
     .fa-play,
-    .fa-pause {
-        font-size: 20px !important;
+    .fa-pause{
+        font-size: 20px!important;
         top: 2px;
     }
 
-    .course-Name {
+    .course-Name{
         font-size: 25px;
         margin-left: -20px;
+    }
+
+    #myPlayer{
+        margin: 10px 0;
+    }
+    .player .musicPlayer .overlay{
+        bottom: 15px;
+        height: 50px;
     }
 }
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
-
-    .player .musicPlayer .overlay {
-        width: 95.5%;
-    }
-
-    .musicPlayer button {
+    .musicPlayer button{
         margin-right: 20px;
         font-size: 23px;
     }
 
-    .time-calc {
+    .time-calc{
         margin: 0 20px 0 40px;
+    }
+
+    #myPlayer{
+        margin: 10px 0;
+    }
+    .player .musicPlayer .overlay{
+        bottom: 15px;
     }
 }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .player .musicPlayer .overlay {
-        width: 96%;
+    #myPlayer{
+        margin: 10px 0;
+    }
+    .player .musicPlayer .overlay{
+        bottom: 15px;
     }
 }
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    .player .musicPlayer .overlay {
-        bottom: 15px;
+    
+    #myPlayer{
+        margin-top: 100px;
+    }
+    .player .musicPlayer .overlay{
+        bottom: 5px;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
+@media (min-width: 1200px) { 
+    #myPlayer{
+        margin-top: 25px;
+    }
+    .player .musicPlayer .overlay{
+        bottom: 5px;
+    }
 }

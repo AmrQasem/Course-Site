@@ -24,14 +24,12 @@
     padding-top: 50px;
 }
 
-.edit a {
+.edit a{
     text-decoration: none;
     color: white;
 }
 
 .mainPage {
-    display: flex;
-    align-items: center;
     background: url("../images/main img.jpg") no-repeat left center;
     background-size: cover;
     background-attachment: fixed;
@@ -41,31 +39,58 @@
     padding: 10px 0;
 }
 
+.user-courses{
+    border-radius: 20px;
+    padding-bottom: 20px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.section-name{
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.fa-plus-circle{
+    color: #28A745;
+    font-size: 18px;
+}
+
 .card{
-    /*background-color: rgba(255, 255, 255, 0.5);*/
-    background: rgba(200, 202, 250, 0.5);
     margin-top: 20px;
-    padding-bottom: 30px;
-    max-width: 350px;
-    box-shadow: 2px 2px 20px 5px #000;
+    max-width: 100%;
 }
 
-.card:hover{
-    box-shadow: 2px 2px 30px 10px #000;
+.course a {
+    text-decoration: none;
+    color: black;
 }
 
-.card-body h3{
-    margin-bottom: 30px;
+.mycard-img{
+    position: relative;
+    overflow: hidden;
+    
 }
 
-.card-body div{
-    margin-top: 20px;
+.card-body{
+    padding: 5px 0;
 }
 
-.edit-course a{
-    color: white!important;
+.course-name{
+    text-align: center;
+}
+
+i.fa{
+    font-size: 18px;
+    color: white;
+}
+
+.control-button{
+    width: 105px;
 }
 /* start media query*/
+
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
     .navbar form .search{
@@ -122,5 +147,17 @@
 
     .navbar form a button{
         color: white;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-img-top{
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .card{
+        max-width: 350px;
     }
 }

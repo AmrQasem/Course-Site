@@ -1,9 +1,9 @@
-.home {
+.home{
     margin: auto;
     align-items: center;
 }
 
-.navbar form {
+.navbar form{
     margin-right: 20px;
 }
 
@@ -14,17 +14,17 @@
     margin-top: -10px;
 }
 
-.user-page-redirect a {
+.user-page-redirect a{
     text-decoration: none;
     color: white;
 }
 
-.user-Name {
+.user-Name{
     font-size: 30px;
     padding-top: 50px;
 }
 
-.edit a {
+.edit a{
     text-decoration: none;
     color: white;
 }
@@ -39,20 +39,20 @@
     padding: 10px 0;
 }
 
-.user-courses {
+.user-courses{
     border-radius: 20px;
     padding-bottom: 20px;
     background: rgba(0, 0, 0, 0.3);
 }
 
-.section-name {
+.section-name{
     color: white;
     background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 20px;
 }
 
-.card {
+.card{
     margin-top: 20px;
     max-width: 100%;
 }
@@ -62,20 +62,21 @@
     color: black;
 }
 
-.mycard-img {
+.mycard-img{
     position: relative;
     overflow: hidden;
+    
 }
 
-.card-body {
+.card-body{
     padding: 5px 0;
 }
 
-    .card-body .course-name {
-        text-align: center;
-    }
+.course-name{
+    text-align: center;
+}
 
-.card-overlay {
+.card-overlay{
     text-align: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
@@ -88,13 +89,13 @@
     transition: all 0.3s ease-in-out;
 }
 
-    .card-overlay span {
-        height: 100px;
-        width: 100px;
-        margin-top: 20%;
-    }
+.card-overlay span{
+    height: 100px;
+    width: 100px;
+    margin-top: 20%;
+}
 
-.card:hover .card-overlay {
+.card:hover .card-overlay{
     display: block;
 }
 
@@ -102,71 +103,71 @@
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
-    .navbar form .search {
+    .navbar form .search{
         width: 300px;
     }
 
-    .navbar form .search {
+    .navbar form .search{
         width: 210px;
     }
+
 }
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
+    
 }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+    
 }
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    .navbar {
-        height: 80px !important;
+    .navbar{
+        height: 80px!important;
         font-size: 20px
     }
-
-        .navbar form a button {
-            color: white;
-        }
-
-        .navbar .navbar-brand {
-            margin-left: 0;
-        }
-
-        .navbar form .search {
-            width: 210px;
-        }
+    .navbar form a button{
+        color: white;
+    }
+    .navbar .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar form .search{
+        width: 210px;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-    .navbar {
-        height: 80px !important;
+@media (min-width: 1200px) { 
+    .navbar{
+        height: 80px!important;
         font-size: 20px
     }
 
-        .navbar .navbar-brand {
-            margin-left: 100px;
-        }
+    .navbar .navbar-brand {
+        margin-left: 100px;
+    }
 
-        .navbar form .search {
-            width: 300px;
-        }
+    .navbar form .search{
+        width: 300px;
+    }
 
-        .navbar form a button {
-            color: white;
-        }
+    .navbar form a button{
+        color: white;
+    }
 }
 
 @media (min-width: 992px) {
-    .card-img-top {
+    .card-img-top{
         max-height: 150px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .card {
+    .card{
         max-width: 350px;
     }
 }

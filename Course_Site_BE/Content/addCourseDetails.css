@@ -80,11 +80,14 @@
     padding-right: 125px;
     background: transparent;    
 }
+.userImg{
+    position: relative;
+}
+.courseDetails #imagePath {
+    position: absolute;
+    width: 135px;
+    max-width: 135px;
 
-#imagePath{
-   position: absolute;
-   width: 135px;
-   max-width: 135px;
 }
 
 .add-new-course{

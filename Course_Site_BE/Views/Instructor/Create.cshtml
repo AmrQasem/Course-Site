@@ -1,13 +1,15 @@
 ﻿@model Course_Site_BE.ViewModels.CourseVM
 
 @{
+    /**/
+
     ViewBag.Title = "Create";
 }
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-    <div class="addCourse" id="addCourse">
+    @*<div class="addCourse" id="addCourse">
         <div class="container">
             <div class="row">
                 <div class="back-div mx-auto col-xl-6 col-lg-6 col-md-8 col-12">
@@ -23,6 +25,12 @@
 
                         </div>
                         <div class="form-group">
+                            <span>
+                                <label id="imagePath" class="btn btn-primary" for="choose-course-image">Choose Image</label>
+                                <input id="choose-course-image" class="form-control" type="file" name="pic" accept="image/*">
+                            </span>
+                        </div>
+                        <div class="form-group">
                             <textarea id="price" class="form-control" name="price" placeholder="Price"></textarea>
                             @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
 
@@ -30,11 +38,8 @@
                         <div class="form-group">
                             <textarea id="duration" class="form-control" name="duration" placeholder="Duration"></textarea>
                             @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
-
                         </div>
                         <div class="form-group">
-                            @*<textarea id="categoryname" class="form-control" name="categoryname" placeholder="Category Name"></textarea>*@
-                            @*@Html.DropDownListFor(model => model.ID, ViewBag.CategoryList, new SelectList(Model.CategoriesID, "ID", "CategoryName"))*@
                             @Html.DropDownListFor(model => model.CategoryID, (IEnumerable<SelectListItem>)ViewBag.sources, new { htmlAttributes = new { @id = "CategName" } })
                         </div>
                         <div class="form-group">
@@ -55,9 +60,66 @@
                 </div>
             </div>
         </div>
+    </div>*@
+
+    <div class="home courseDetails">
+
+        <div class="addCourse" id="addCourse">
+            <div class="container">
+                <div class="row">
+                    <div class="back-div mx-auto col-xl-6 col-lg-6 col-md-8 col-12">
+                        <h2 class="page-head text-center mx-auto">ADD Course Info</h2>
+                        <form class="form col-12">
+                            <div class="form-group">
+                                <input id="course-name" class="form-control" name="course-name" placeholder="Course Name" type="text">
+                                @Html.ValidationMessageFor(model => model.CourseName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <input id="instructor-name" class="form-control" name="instructor-name" placeholder="instructor Name" type="text">
+                                @Html.ValidationMessageFor(model => model.Instructor, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group userImg">
+
+                                <label id="imagePath" class="btn btn-primary" for="choose-course-image">Choose Image</label>
+                                <input id="choose-course-image" class="form-control" type="file" name="pic" accept="image/*">
+
+                            </div>
+                            <div class="form-group">
+                                <textarea id="details" class="form-control" rows="5" name="details" placeholder="Course Details"></textarea>
+                                @Html.ValidationMessageFor(model => model.CourseDescription, "", new { @class = "text-danger" })
+
+                            </div>
+                            <div class="form-group">
+                                <textarea id="duration" class="form-control" name="duration" placeholder="Duration"></textarea>
+                                @Html.ValidationMessageFor(model => model.Duration, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.DropDownListFor(model => model.CategoryID, (IEnumerable<SelectListItem>)ViewBag.sources, new { htmlAttributes = new { @id = "CategName" } })
+                            </div>
+                            <div class="form-group">
+                                <textarea id="price" class="form-control" rows="1" name="price" placeholder="Price"></textarea>
+                                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group text-center">
+                                <input class="add-new-course btn btn-success" type="button" value="Next">
+                            </div>
+                            <div class="form-group text-center">
+                                <a href=@Url.Action("Index","Instructor")>
+                                    <button class="btn btn-danger" type="button">Cancel</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="~/Scripts/addCourseDetails.js"></script>
+
+
+
+}
+

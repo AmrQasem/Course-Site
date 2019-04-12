@@ -76,6 +76,16 @@
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 411px){
+    .container{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .btn-success{
+        max-width: 220px;
+    }
+}
+
 @media (min-width: 1200px) { 
     .navbar{
         height: 80px!important;

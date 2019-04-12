@@ -101,6 +101,7 @@
     }
     .navbar form a button{
         color: white;
+        width: 100px;
     }
     .navbar .navbar-brand {
         margin-left: 0;

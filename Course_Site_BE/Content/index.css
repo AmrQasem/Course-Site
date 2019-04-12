@@ -120,16 +120,11 @@
         width: 300px;
     }
 
-    .card-img-overlay{
-        max-width: 92%;
-        max-height: 93%;
-        margin-top: 5%;
-    }
     .navbar form .search{
         width: 210px;
     }
     .header .header-overlay p{
-        font-size: 30px;
+        font-size: 26px;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -138,8 +133,10 @@
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
     .header .header-overlay p{
-        font-size: 45px;
+        font-size: 40px;
         max-width: 550px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
 

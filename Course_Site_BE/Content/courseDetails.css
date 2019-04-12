@@ -35,8 +35,8 @@ body {
 .course{
     /*background: url("../images/main img.jpg") no-repeat left center;
     background-size: cover;
-    background-attachment: fixed;
-    background: rgb(250, 252, 255);*/
+    background-attachment: fixed;*/
+    background: rgb(250, 252, 255);
 }
 
 .course-head{
@@ -45,12 +45,11 @@ body {
     padding-left: 10%;
 }
 
-.course-name {
+.course-name{
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 2px;
     font-family: proxima;
-    text-align: left;
 }
 
 .course-image-div{
@@ -62,7 +61,7 @@ body {
     border-radius: 10px;
 }
 
-.course-image-div .overlay {
+.overlay{
     margin: auto;
     align-items: center;
     text-align: center;
@@ -78,21 +77,18 @@ body {
     padding-top: 35%;
 }
 
-.course-image-div .overlay:hover {
+.overlay:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.course-image-div .overlay .fa-play {
+.overlay .fa-play {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     height: 120px;
     width: 120px;
     padding: 20px 0 0 10px;
     margin-top: -20px;
-}
-
-.course-image-div .overlay .fa-5x {
-    font-size: 5em !important;
+    
 }
 
 .course-details,
