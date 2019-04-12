@@ -21,3 +21,4 @@ D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csproj.CoreCompileInputs
 D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csproj.CopyComplete
 D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.dll
 D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.pdb
+D:\CourseSite\CourseSite.Data\obj\Debug\CourseSite.Data.csprojResolveAssemblyReference.cache
